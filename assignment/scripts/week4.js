@@ -40,11 +40,12 @@ console.log( 'in isParkedHere' );
 function isParkedHere( nameOfCar ){
   for( let i=0; i<maxCars; i++ ){
     parkedCars.push( nameOfCar );
-    console.log( 'Is the', nameOfCar , 'parked in the garage?' );
     if( nameOfCar === parkedCars[ i ] ){
+      console.log( 'Is the', nameOfCar , 'parked in the garage?' );
       return true;
     } // end if
   } // end for
+  console.log( 'Is the', nameOfCar , 'parked in the garage?' );
   return false;
 } // end isParkedHere
 
@@ -54,3 +55,27 @@ console.log( isParkedHere( 'Chevy Cruise' ) );
 console.log( isParkedHere( 'Audi RS 5 Sportback' ) );
 console.log( isParkedHere( 'Toyota Highlander' ) );
 console.log( isParkedHere( 'Jeep Wrangler' ) );
+
+
+
+// takeForSpin function
+//---------------------
+
+//console.log( 'in takeForSpin' );
+
+//function takeForSpin( nameOfCar ){
+//  for( let i=0; i<maxCars; i++ ){
+//    console.log( 'Is', nameOfCar, 'ready to be taken out for a spin?' );
+//    if( nameOfCar === parkedCars[ i ] && nameOfCar === isParkedHere ){
+//      return true;
+//  } // end for
+//  splice here
+//  return false;
+//} // takeForSpin
+
+//console.log( takeForSpin( 'Ford Explorer' ) );
+//console.log( takeForSpin( 'Nisson GTR' ) );
+//console.log( takeForSpin( 'Chevy Cruise' ) );
+//console.log( takeForSpin( 'Audi RS 5 Sportback' ) );
+//console.log( takeForSpin( 'Toyota Highlander' ) );
+//console.log( takeForSpin( 'Jeep Wrangler' ) );
