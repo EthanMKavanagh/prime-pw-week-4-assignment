@@ -1,5 +1,9 @@
 console.log( 'js' );
 
+
+// parkCar Funtion
+//----------------
+
 let parkedCars = [];
 const maxCars = 5;
 
@@ -26,26 +30,27 @@ console.log( parkCar( 'Jeep Wrangler' ) );
 
 
 
-// Stretch Goals
+// Stretch Goals!!!
+//=================
 // isParkedHere function
-/*
-- funtion isParkedHere that recieves cars
-- run "isParkedHere('Ford Explorer')"
-  - return true if in garage
-  - return false if not in garage
-*/
-parkedCars = [ 'Ford Explorer', 'Nisson GTR', 'Chevy Cruise', 'Audi RS 5 Sportback' ];
+//----------------------
+
+console.log( 'in isParkedHere' );
 
 function isParkedHere( nameOfCar ){
-  console.log( 'in isParkedHere' );
-  for( let i=0; i<parkedCars.length; i++ ){
-
-  }
+  for( let i=0; i<maxCars; i++ ){
+    parkedCars.push( nameOfCar );
+    console.log( 'Is the', nameOfCar , 'parked in the garage?' );
+    if( nameOfCar === parkedCars[ i ] ){
+      return true;
+    } // end if
+  } // end for
+  return false;
 } // end isParkedHere
 
-// isParkedHere( 'Ford Explorer' );
-// isParkedHere( 'Nisson GTR' );
-// isParkedHere( 'Chevy Cruise' );
-// isParkedHere( 'Audi RS 5 Sportback' );
-
-// console.log( isParkedHere() );
+console.log( isParkedHere( 'Ford Explorer' ) );
+console.log( isParkedHere( 'Nisson GTR' ) );
+console.log( isParkedHere( 'Chevy Cruise' ) );
+console.log( isParkedHere( 'Audi RS 5 Sportback' ) );
+console.log( isParkedHere( 'Toyota Highlander' ) );
+console.log( isParkedHere( 'Jeep Wrangler' ) );
