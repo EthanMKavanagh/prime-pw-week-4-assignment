@@ -7,16 +7,16 @@ console.log( 'js' );
 let parkedCars = [];
 const maxCars = 5;
 
-console.log( 'in parkCar' );
 
 function parkCar( nameOfCar ){
+  console.log( 'in parkCar' );
   if( parkedCars.length < maxCars ){
     parkedCars.push( nameOfCar );
-    console.log( 'Is in the garage:', nameOfCar );
+    console.log( 'Can I park the', nameOfCar, 'in the garage?' );
     return true;
   } // end if
   else{
-    console.log( 'Is in the garage:', nameOfCar );
+    console.log( 'Can I park the', nameOfCar, 'in the garage?' );
     return false;
   } // end else
 } // end parkCar
@@ -35,9 +35,9 @@ console.log( parkCar( 'Jeep Wrangler' ) );
 // isParkedHere function
 //----------------------
 
-console.log( 'in isParkedHere' );
 
 function isParkedHere( nameOfCar ){
+  console.log( 'in isParkedHere' );
   for( let i=0; i<maxCars; i++ ){
     parkedCars.push( nameOfCar );
     if( nameOfCar === parkedCars[ i ] ){
@@ -58,24 +58,24 @@ console.log( isParkedHere( 'Jeep Wrangler' ) );
 
 
 
-// takeForSpin function
+// takeForASpin function
 //---------------------
 
-//console.log( 'in takeForSpin' );
 
-//function takeForSpin( nameOfCar ){
-//  for( let i=0; i<maxCars; i++ ){
-//    console.log( 'Is', nameOfCar, 'ready to be taken out for a spin?' );
-//    if( nameOfCar === parkedCars[ i ] && nameOfCar === isParkedHere ){
-//      return true;
-//  } // end for
-//  splice here
-//  return false;
-//} // takeForSpin
+function takeForASpin( nameOfCar ){
+  console.log( 'in takeForASpin' );
+  if( isParkedHere( nameOfCar ) ){
+    parkedCars.splice( (parkedCars.indexOf( nameOfCar ) ), 1 );
+    console.log( 'Is', nameOfCar, 'ready to be taken out for a spin?' );
+    return true;
+  } // end if
+  console.log( 'Is', nameOfCar, 'ready to be taken out for a spin?' );
+  return false;
+} // takeForSpin
 
-//console.log( takeForSpin( 'Ford Explorer' ) );
-//console.log( takeForSpin( 'Nisson GTR' ) );
-//console.log( takeForSpin( 'Chevy Cruise' ) );
-//console.log( takeForSpin( 'Audi RS 5 Sportback' ) );
-//console.log( takeForSpin( 'Toyota Highlander' ) );
-//console.log( takeForSpin( 'Jeep Wrangler' ) );
+console.log( takeForASpin( 'Ford Explorer' ) );
+console.log( takeForASpin( 'Nisson GTR' ) );
+console.log( takeForASpin( 'Chevy Cruise' ) );
+console.log( takeForASpin( 'Audi RS 5 Sportback' ) );
+console.log( takeForASpin( 'Toyota Highlander' ) );
+console.log( takeForASpin( 'Jeep Wrangler' ) );
