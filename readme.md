@@ -80,3 +80,13 @@ For Example:
 - We should be able to run `takeForASpin('Red')` or `takeForASpin('PT Cruiser')` and find the car. If it is not there, we should still get `false`.
 
 How would you go about storing additional information for this car? What if you wanted to store year, make, model, VIN, owner, and a bunch of other information?  (Hint: research objects)
+
+ANSWER:
+In an object:
+car = {
+    year: year
+    make: make
+    model: model
+    VIN: vin
+    owner: owner
+}
